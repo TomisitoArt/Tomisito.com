@@ -39,7 +39,9 @@ HTML,BODY{
     border: 12px solid var(--default-color);
     border-top: 0;
 	border-image: url(../../assets/images/border_image_upscale.png) 33%;
+	color: var(--default-color);
 }
+
 
 #content-wrapper{
 	margin-top: 10%;
@@ -72,6 +74,11 @@ p {
     color: var(--default-color)
 }
 
+::selection{
+	color: var(--background-color);
+	background: var(--default-color)
+}
+
 #nav {
     list-style: none;
 	display: flex;
@@ -79,6 +86,7 @@ p {
 	justify-content:space-around;
 	padding: 0;
     font-weight: bold;
+	user-select: none;
 }
 
 #nav a:any-link {
@@ -89,9 +97,10 @@ p {
     color: var(--default-color);
     text-decoration: none;
     pointer-events: none;
+	user-select: none;
 }
 
-#color{
+a:any-link{
 	color: var(--default-color);
 }
 
@@ -99,18 +108,11 @@ a:hover{
 	opacity: 0.75;
 }
 
-
 .grid-container{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 1em;
-}
-
-.socials{
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	gap: 1em;
+	align-items: center;
 }
 
 @media (max-width: 399px) {
@@ -121,21 +123,54 @@ a:hover{
 
 .item{
 	width: 100%;
+	position: static;
+	animation-name: gallery_not_hover;
+    animation-duration: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-ul {
-	list-style-image: url(/assets/images/Item_Star.png);
+.item:hover{
+	position: static;
+	animation-name: gallery_hover;
+    animation-duration: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-li {
-	color: #d7a174;
+@keyframes gallery_hover {
+	from {width: 100%; margin: auto;}
+	to {width: 95%; margin: auto;}
 }
 
-h3 {
-	color:#d7a174;
-
+@keyframes gallery_not_hover {
+	from {width: 95%; margin: auto;}
+	to {width: 100%; margin: auto;}
 }
 
-img:hover{
-	opacity: 80%
+ul{
+	list-style-image: url(../../assets/images/Item_Star.png);
+}
+
+.checkbox_off{
+	list-style-image: url(../../assets/images/Checkbox_off.png);
+}
+
+.checkbox_on{
+	list-style-image: url(../../assets/images/Checkbox_on.png);
+}
+
+.home_image{
+	width: 50%;
+}
+
+.home_box{
+	display: flex;
+	align-items:flex-start
+}
+
+-item:active{
+	opacity: 0.5
 }
