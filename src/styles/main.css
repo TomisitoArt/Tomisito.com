@@ -163,12 +163,13 @@ ul{
 }
 
 .home_image{
-	width: 100%;
+	width: 50%;
 }
 
 .home_box{
 	display: flex;
-	align-items:flex-start
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 -item:active{
