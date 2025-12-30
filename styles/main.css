@@ -71,7 +71,8 @@ HTML,BODY{
 }
 
 p {
-    color: var(--default-color)
+    color: var(--default-color);
+	width: 50%;
 }
 
 ::selection{
