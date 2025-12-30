@@ -72,7 +72,6 @@ HTML,BODY{
 
 p {
     color: var(--default-color);
-	width: 50%;
 }
 
 ::selection{
@@ -175,4 +174,8 @@ ul{
 
 -item:active{
 	opacity: 0.5
+}
+
+.home_image > .p:first-child{
+	width: 50%;
 }
