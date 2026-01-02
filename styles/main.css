@@ -1,5 +1,5 @@
 HTML{
-    background: no-repeat var(--background-color) top right;
+    background-image: url(../assets/images/Tiled_Background.png);
     --background-color: #58272d;
     --default-color: #d7a174;
 }
