@@ -1,5 +1,5 @@
 HTML{
-    background-image: url(../assets/images/Tiled_Background.png);
+    background-image: url(/images/background.png);
     --background-color: #58272d;
     --default-color: #d7a174;
 }
@@ -38,7 +38,7 @@ HTML,BODY{
 	overflow: hidden; /* Hides stuff that doesn't fit */
     border: 12px solid var(--default-color);
     border-top: 0;
-	border-image: url(../../assets/images/border_image_upscale.png) 33%;
+	border-image: url(/images/border.png) 33%;
 	color: var(--default-color);
 }
 
@@ -108,58 +108,42 @@ a:hover{
 	opacity: 0.75;
 }
 
-.grid-container{
+#gallery{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1em;
+	grid-gap: 1em;
 	align-items: center;
 }
 
 @media (max-width: 399px) {
-  .grid-container {
+  #gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.item{
-	width: 100%;
-	position: static;
-	animation-name: gallery_not_hover;
-    animation-duration: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+.gallery-image{
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+	transition: transform 250ms;
+	cursor: pointer;
 }
 
-.item:hover{
-	position: static;
-	animation-name: gallery_hover;
-    animation-duration: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
-@keyframes gallery_hover {
-	from {width: 100%; margin: auto;}
-	to {width: 95%; margin: auto;}
-}
-
-@keyframes gallery_not_hover {
-	from {width: 95%; margin: auto;}
-	to {width: 100%; margin: auto;}
+.gallery-image:hover{
+	transform: scale(0.98);
+	box-shadow: 0px 0px 10px var(--default-color);
 }
 
 ul{
-	list-style-image: url(../../assets/images/Item_Star.png);
+	list-style-image: url(/images/item_star.png);
 }
 
 .checkbox_off{
-	list-style-image: url(../../assets/images/Checkbox_off.png);
+	list-style-image: url(/images/checkbox_off.png);
 }
 
 .checkbox_on{
-	list-style-image: url(../../assets/images/Checkbox_on.png);
+	list-style-image: url(/images/checkbox_on.png);
 }
 
 .home_image{
@@ -178,4 +162,27 @@ ul{
 
 .home_box p{
 	width: 50%;
+}
+
+#popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 999;
+}
+
+#popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#popup-image {
+  max-width: 90vw;
+  max-height: 90vh;
 }
