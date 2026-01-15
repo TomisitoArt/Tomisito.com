@@ -53,6 +53,15 @@ HTML,BODY{
 	margin: auto;
 }
 
+#thin-divider {
+	max-width: 700px;
+	border-bottom: 1px solid var(--default-color);
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+
 @keyframes header-carousel {
 	from {transform: translateX(0px)}
 	to {transform: translateX(-932px)}
@@ -156,6 +165,7 @@ ul{
 	justify-content: space-evenly;
 }
 
+/* idk if this should be here, but I'm too lazy to check it rn */
 -item:active{
 	opacity: 0.5
 }
@@ -185,4 +195,22 @@ ul{
 #popup-image {
   max-width: 90vw;
   max-height: 90vh;
+}
+
+#bottom{
+	max-width: 700px;
+	margin: auto;
+	padding: 10px 10px 3rem;
+	text-align: center;
+	font-size: 50%;
+}
+
+#bottom b{
+	background-color: var(--background-color);
+	color: var(--default-color);
+	display: inline;
+}
+
+#bottom img:hover{
+	box-shadow: 0px 0px 10px var(--default-color);
 }
