@@ -207,6 +207,9 @@ ul{
 }
 
 #bottom p{
+	max-width: 700px;
+	margin: auto;
+	overflow: hidden; /* Hides stuff that doesn't fit */
 	background-color: var(--background-color);
 	color: var(--default-color);
 	display: inline;
