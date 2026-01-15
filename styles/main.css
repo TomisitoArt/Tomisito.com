@@ -203,7 +203,7 @@ ul{
 	margin: auto;
 	padding: 10px 10px 3rem;
 	text-align: center;
-	font-size: 50%;
+	font-size: 60%;
 }
 
 #bottom p{
@@ -214,6 +214,7 @@ ul{
 	color: var(--default-color);
 	display: inline;
 	text-align: center;
+	font-weight: bold;
 }
 
 #bottom img:hover{
