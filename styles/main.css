@@ -59,6 +59,7 @@ HTML,BODY{
 	margin: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
+	text-align: center;
 }
 
 
@@ -205,10 +206,11 @@ ul{
 	font-size: 50%;
 }
 
-#bottom b{
+#bottom p{
 	background-color: var(--background-color);
 	color: var(--default-color);
 	display: inline;
+	text-align: center;
 }
 
 #bottom img:hover{
