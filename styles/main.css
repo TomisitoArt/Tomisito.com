@@ -96,6 +96,20 @@ ul{
 	#wrapper{
 		width: 95%;
 	}
+
+	/* Hide decorations*/
+	.plant-deco-one{
+		opacity: 0;
+	}
+	.plant-deco-two{
+		opacity: 0;
+	}
+	.flower-deco-one{
+		opacity: 0;
+	}
+	.flower-deco-two{
+		opacity: 0;
+	}
 }
 
 /*-----------------------------------------*/
