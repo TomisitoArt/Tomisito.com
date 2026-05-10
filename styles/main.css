@@ -168,6 +168,7 @@ ul{
 }
 
 #header-image{
+	user-select: none;
 	display: flex;
 	position: relative;
 	animation-name: header-carousel;
@@ -471,7 +472,122 @@ details:has(.static:not(:checked)) ~ #gallery .tag-static {
 
 /*--------------------------------------------*/
 
+/*----------- Decorations -------------*/
 
+.plant-deco-one{
+	content: url("../images/Deco_Leaf_Static.png");
+	position: absolute;
+	max-height: 91px;
+	rotate: 180deg;
+	left: calc(50vw - 376px);
+	top: 200px;
+	user-select: none;
+}
+
+.plant-deco-one:hover{
+	content: url("../images/Deco_Leaf_Hover.png");
+	position: absolute;
+	max-height: 91px;
+	rotate: 180deg;
+	left: calc(50vw - 376px);
+	top: 200px;
+	user-select: none;
+}
+
+.plant-deco-one:active{
+	content: url("../images/Deco_Leaf_Click.png");
+	position: absolute;
+	max-height: 91px;
+	rotate: 180deg;
+	left: calc(50vw - 376px);
+	top: 200px;
+	user-select: none;
+}
+
+.flower-deco-one{
+	content: url("../images/Deco_Flower_Static.png");
+	position: absolute;
+	max-height: 90px;
+	left: calc(50vw + 317px);
+	top: 300px;
+	user-select: none;
+}
+
+.flower-deco-one:hover{
+	content: url("../images/Deco_Flower_Hover.png");
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw + 317px);
+	top: 300px;
+	user-select: none;
+}
+
+.flower-deco-one:active{
+	content: url("../images/Deco_Flower_Click.png");
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw + 317px);
+	top: 300px;
+	user-select: none;
+}
+
+.flower-deco-two{
+	content: url("../images/Deco_Flower_Static.png");
+	transform: scaleX(-1);
+	position: absolute;
+	max-height: 90px;
+	left: calc(50vw - 376px);
+	top: 450px;
+	user-select: none;
+}
+
+.flower-deco-two:hover{
+	content: url("../images/Deco_Flower_Hover.png");
+	transform: scaleX(-1);
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw - 376px);
+	top: 450px;
+	user-select: none;
+}
+
+.flower-deco-two:active{
+	content: url("../images/Deco_Flower_Click.png");
+	transform: scaleX(-1);
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw - 376px);
+	top: 450px;
+	user-select: none;
+}
+
+.plant-deco-two{
+	content: url("../images/Deco_Leaf_Static.png");
+	position: absolute;
+	max-height: 90px;
+	left: calc(50vw + 316px);
+	top: 600px;
+	user-select: none;
+}
+
+.plant-deco-two:hover{
+	content: url("../images/Deco_Leaf_Hover.png");
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw + 316px);
+	top: 600px;
+	user-select: none;
+}
+
+.plant-deco-two:active{
+	content: url("../images/Deco_Leaf_Click.png");
+	position: absolute;
+	max-height: 91px;
+	left: calc(50vw + 316px);
+	top: 600px;
+	user-select: none;
+}
+/*-----------------------------------------*/
 
 
 
